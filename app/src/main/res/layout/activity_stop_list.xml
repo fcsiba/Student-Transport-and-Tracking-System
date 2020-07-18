@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient_app_theme">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clUserProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+        <LinearLayout
+            android:id="@+id/llStopListUserProfile"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            android:background="@drawable/ic_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llStopListUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/llStopListUserProfile"
+            android:layout_marginStart="5dp">
+            <TextView
+                android:id="@+id/tvStopListUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toEndOf="@+id/llUserPicture"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IBA"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/llUserPicture"
+                app:layout_constraintTop_toBottomOf="@+id/tvParentHomeScreenUserName" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btStopListSettingsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Settings"
+            android:textSize="11sp"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/llStopListUserName"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <Button
+            android:id="@+id/btStopListLogoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Logout"
+            android:textSize="11sp"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/llStopListUserName"
+            app:layout_constraintTop_toBottomOf="@id/btStopListSettingsButton"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvBusStopTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Your Stop"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:visibility="visible"
+        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintTop_toBottomOf="@id/clUserProfile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/rvBusStopList"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBusStopList"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toTopOf="@+id/fabBusStopPointsBackButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBusStopTitle" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fabBusStopPointsBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:fab_colorNormal="#D2A07B"
+        app:fab_colorPressed="@color/colorPrimary"
+        app:rippleColor="@color/colorPrimaryDark"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="40dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

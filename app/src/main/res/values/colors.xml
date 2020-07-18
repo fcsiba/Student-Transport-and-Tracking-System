@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#AA9E91</color>
+    <color name="colorPrimaryDark">#44403C</color>
+    <color name="colorAccent">#AA9E91</color>
+
+    <color name="colorGradientStart">#AA9E91</color>
+    <color name="colorGradientEnd">#44403C</color>
+    <color name="colorGradientListItemStart">#D2A07B</color>
+    <color name="colorGradientListItemCenter">#BC987D</color>
+    <color name="colorGradientListItemEnd">#C2A693</color>
+    <color name="white">#FFFFFF</color>
+</resources>

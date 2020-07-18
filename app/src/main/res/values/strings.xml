@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Stats</string>
+
+    <array name="user_type_array">
+        <item>Student</item>
+        <item>Driver</item>
+        <item>Parent</item>
+    </array>
+</resources>
